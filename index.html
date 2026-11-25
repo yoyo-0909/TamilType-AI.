@@ -4,57 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#101b18">
-<meta name="description" content="Speak in Tamil and get editable text instantly. Tamil voice typing made simple.">
+<meta name="description" content="Speak in Tamil and get accurate, editable Tamil text.">
 <title>TamilType — Tamil Voice Typing</title>
 <style>
-:root{color-scheme:light;--ink:#14211d;--muted:#66736e;--green:#176b50;--mint:#e8f4ee;--line:#e4eae6;--paper:#fbfcfa}
+:root{color-scheme:light;--ink:#14211d;--muted:#69766f;--green:#176b50;--mint:#e8f4ee;--line:#e4eae6;--paper:#fbfcfa}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;min-height:100vh}
-main{width:min(100% - 32px,760px);margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 0 calc(28px + env(safe-area-inset-bottom))}
-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:54px}.brand{display:flex;gap:10px;align-items:center;font-weight:750;font-size:19px;letter-spacing:-.5px}.mark{width:34px;height:34px;border-radius:11px;background:var(--green);color:white;display:grid;place-items:center;font-size:18px}.privacy{font-size:12px;color:var(--muted);background:#f0f3f0;border-radius:99px;padding:8px 11px}
-.eyebrow{font-size:12px;letter-spacing:1.7px;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:14px}h1{font-size:clamp(36px,8vw,58px);line-height:1.04;letter-spacing:-2.4px;margin:0 0 14px;font-weight:760}.sub{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 32px;max-width:520px}
-.panel{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 12px 35px #19392a0a}
-.paneltop{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.paneltop strong{font-size:14px}.lang{font-size:12px;color:var(--green);font-weight:650;background:var(--mint);padding:7px 10px;border-radius:99px}
-textarea{display:block;width:100%;min-height:230px;resize:vertical;border:0;outline:0;background:transparent;color:var(--ink);font:22px/1.8 -apple-system,BlinkMacSystemFont,"Noto Sans Tamil","Latha",sans-serif;padding:8px 2px}textarea::placeholder{color:#a3ada7}.meta{display:flex;justify-content:space-between;color:#89948e;font-size:12px;border-top:1px solid #f0f2f0;padding-top:12px}
-.actions{display:flex;gap:10px;margin-top:17px}.btn{border:0;border-radius:14px;min-height:50px;padding:0 17px;font-size:14px;font-weight:680;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px}.record{flex:1;background:var(--green);color:white}.record:disabled{opacity:.65}.record.active{background:#b43d3d}.secondary{background:#f0f4f1;color:var(--ink)}.secondary:disabled{opacity:.45}.mic{font-size:17px}.status{min-height:24px;text-align:center;color:var(--muted);font-size:13px;margin:14px 0 0}.status.live{color:#b43d3d}
-.tip{display:flex;gap:12px;margin:22px 4px 0;color:var(--muted);font-size:13px;line-height:1.55}.tip b{color:var(--ink)}.tipicon{font-size:17px}
-footer{text-align:center;color:#9aa39e;font-size:12px;margin-top:56px}
-@media(min-width:650px){main{padding-top:34px}header{margin-bottom:70px}.panel{padding:24px}textarea{min-height:260px}}
+main{width:min(100% - 30px,760px);margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 0 calc(28px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(38px,9vh,72px)}.brand{display:flex;gap:10px;align-items:center;font-weight:760;font-size:19px;letter-spacing:-.5px}.mark{width:36px;height:36px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:19px}.privacy{font-size:11px;color:var(--muted);background:#f0f3f0;border-radius:99px;padding:8px 10px}
+.eyebrow{font-size:11px;letter-spacing:1.7px;text-transform:uppercase;color:var(--green);font-weight:750;margin-bottom:13px}h1{font-size:clamp(38px,9vw,60px);line-height:1.03;letter-spacing:-2.6px;margin:0 0 14px;font-weight:780}.sub{font-size:15px;line-height:1.65;color:var(--muted);margin:0 0 28px;max-width:540px}
+.panel{background:white;border:1px solid var(--line);border-radius:23px;padding:16px;box-shadow:0 12px 35px #19392a0a}.paneltop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.paneltop strong{font-size:14px}.lang{font-size:12px;color:var(--green);font-weight:700;background:var(--mint);padding:7px 10px;border-radius:99px}
+textarea{display:block;width:100%;min-height:210px;resize:vertical;border:0;outline:0;background:transparent;color:var(--ink);font:22px/1.8 -apple-system,BlinkMacSystemFont,"Noto Sans Tamil","Latha",sans-serif;padding:8px 2px}textarea::placeholder{color:#a3ada7}.meta{display:flex;justify-content:space-between;color:#89948e;font-size:12px;border-top:1px solid #f0f2f0;padding-top:12px}
+.actions{display:flex;gap:9px;margin-top:16px}.btn{border:0;border-radius:14px;min-height:52px;padding:0 15px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;-webkit-tap-highlight-color:transparent}.record{flex:1;background:var(--green);color:white}.record.active{background:#b43d3d}.record:disabled{opacity:.65}.secondary{background:#f0f4f1;color:var(--ink)}.secondary:disabled{opacity:.4}.mic{font-size:17px}.status{min-height:24px;text-align:center;color:var(--muted);font-size:13px;line-height:1.5;margin:13px 2px 0}.status.live{color:#b43d3d}.status.error{color:#a33b35}
+.tip{display:flex;gap:11px;margin:20px 4px 0;color:var(--muted);font-size:13px;line-height:1.55}.tip b{color:var(--ink)}.tipicon{font-size:17px}footer{text-align:center;color:#9aa39e;font-size:12px;margin-top:48px}
+@media(min-width:650px){main{padding-top:32px}header{margin-bottom:68px}.panel{padding:24px}textarea{min-height:260px}}
 </style>
 </head>
 <body>
 <main>
 <header><div class="brand"><span class="mark">த</span><span>TamilType</span></div><span class="privacy">Private by design</span></header>
-<section><div class="eyebrow">Tamil voice typing</div><h1>Your Tamil.<br>In text.</h1><p class="sub">Speak naturally in Tamil. Your words appear here, ready to edit and copy wherever you need them.</p></section>
+<section><div class="eyebrow">Tamil voice typing</div><h1>Your Tamil.<br>In text.</h1><p class="sub">Tap record, speak naturally in Tamil, and let AI turn your voice into editable text you can copy anywhere.</p></section>
 <section class="panel" aria-label="Tamil transcription">
 <div class="paneltop"><strong>Your transcription</strong><span class="lang">தமிழ் · ta-IN</span></div>
-<textarea id="output" lang="ta" placeholder="இங்கே உங்கள் உரை தோன்றும்… அல்லது தட்டச்சு செய்யத் தொடங்குங்கள்." spellcheck="false"></textarea>
+<textarea id="output" lang="ta" placeholder="இங்கே உங்கள் உரை தோன்றும்… அல்லது தட்டச்சு செய்யத் தொடங்குங்கள்." spellcheck="false" autocapitalize="sentences"></textarea>
 <div class="meta"><span id="state">Ready when you are</span><span id="count">0 characters</span></div>
 <div class="actions">
-<button class="btn record" id="record"><span class="mic">●</span><span id="recordLabel">Start speaking</span></button>
-<button class="btn secondary" id="copy" disabled>Copy text</button>
-<button class="btn secondary" id="clear" disabled>Clear</button>
+<button class="btn record" id="record" type="button"><span class="mic" id="mic">●</span><span id="recordLabel">Start speaking</span></button>
+<button class="btn secondary" id="copy" type="button" disabled>Copy</button>
+<button class="btn secondary" id="clear" type="button" disabled>Clear</button>
 </div>
-<p class="status" id="status" role="status" aria-live="polite">Tap the microphone and start speaking in Tamil.</p>
+<p class="status" id="status" role="status" aria-live="polite">Tap Start speaking and allow microphone access.</p>
 </section>
-<div class="tip"><span class="tipicon">ⓘ</span><span><b>iPhone tip:</b> If voice recording is unavailable in your browser, tap the text area and use the microphone on the iPhone keyboard. Choose Tamil if needed. Your text stays on this device.</span></div>
+<div class="tip"><span class="tipicon">ⓘ</span><span><b>Works on iPhone:</b> TamilType records audio in Safari and transcribes it with AI. You can also tap the text box and use the microphone on your iPhone keyboard for Apple's built-in dictation.</span></div>
 <footer>Made for the way you speak.</footer>
 </main>
 <script>
-(()=>{const out=document.getElementById('output'),rec=document.getElementById('record'),label=document.getElementById('recordLabel'),copy=document.getElementById('copy'),clear=document.getElementById('clear'),status=document.getElementById('status'),state=document.getElementById('state'),count=document.getElementById('count');let recognition=null,listening=false,finalText='';
-const supported=('SpeechRecognition'in window)||('webkitSpeechRecognition'in window);
-function update(){const has=out.value.length>0;copy.disabled=!has;clear.disabled=!has;count.textContent=out.value.length+' characters';}
-out.addEventListener('input',()=>{finalText=out.value;update();});
-function setListening(v){listening=v;rec.classList.toggle('active',v);label.textContent=v?'Stop listening':'Start speaking';rec.querySelector('.mic').textContent=v?'■':'●';state.textContent=v?'Listening…':'Ready when you are';status.classList.toggle('live',v);}
-if(supported){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;recognition=new SR();recognition.lang='ta-IN';recognition.continuous=true;recognition.interimResults=true;recognition.maxAlternatives=1;
-recognition.onstart=()=>{setListening(true);status.textContent='Listening… speak clearly in Tamil.';};
-recognition.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){const t=e.results[i][0].transcript;if(e.results[i].isFinal)finalText+=t;else interim+=t;}out.value=finalText+(interim?interim:'');update();};
-recognition.onerror=e=>{setListening(false);status.textContent=e.error==='not-allowed'?'Microphone permission was blocked. Allow microphone access and try again.':'Voice input stopped. You can try again or type below.';};
-recognition.onend=()=>{setListening(false);if(status.textContent==='Listening… speak clearly in Tamil.')status.textContent='Voice input paused. Tap Start speaking to continue.';finalText=out.value;};
-rec.addEventListener('click',()=>{if(listening)recognition.stop();else{finalText=out.value;try{recognition.start();}catch(e){status.textContent='Please wait a moment, then try again.';}}});
-}else{rec.addEventListener('click',()=>{status.textContent='Voice recognition is not available in this browser. Tap the text area and use your device keyboard’s dictation microphone.';out.focus();});}
-copy.addEventListener('click',async()=>{if(!out.value)return;try{await navigator.clipboard.writeText(out.value);status.textContent='Copied. Paste your Tamil text anywhere.';}catch(e){out.focus();out.select();try{document.execCommand('copy');status.textContent='Copied. Paste your Tamil text anywhere.';}catch(_){status.textContent='Select the text and copy it from your device menu.';}}});
-clear.addEventListener('click',()=>{if(listening&&recognition)recognition.stop();out.value='';finalText='';update();status.textContent='Text cleared. Ready for a fresh start.';});
-update();
+(()=> {
+ const out=document.getElementById('output'),rec=document.getElementById('record'),label=document.getElementById('recordLabel'),mic=document.getElementById('mic'),copy=document.getElementById('copy'),clear=document.getElementById('clear'),status=document.getElementById('status'),state=document.getElementById('state'),count=document.getElementById('count');
+ let recorder=null,stream=null,chunks=[],recording=false,processing=false,limitTimer=null;
+ function update(){const has=out.value.length>0;copy.disabled=!has;clear.disabled=!has;count.textContent=out.value.length+' characters';}
+ function say(message,kind){status.textContent=message;status.className='status'+(kind?' '+kind:'');}
+ function stopTracks(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}}
+ function setRecording(v){recording=v;rec.classList.toggle('active',v);label.textContent=v?'Stop & transcribe':'Start speaking';mic.textContent=v?'■':'●';state.textContent=v?'Recording…':(processing?'Transcribing…':'Ready when you are');}
+ async function transcribe(blob){
+   if(!blob||blob.size<1000){say('No clear audio was captured. Please try speaking again.','error');return;}
+   processing=true;rec.disabled=true;state.textContent='Transcribing…';say('Sending your recording securely for Tamil transcription…');
+   try{
+     const data=new FormData();const type=blob.type||'audio/mp4';const ext=type.includes('webm')?'webm':(type.includes('wav')?'wav':(type.includes('mpeg')?'mp3':'m4a'));
+     data.append('audio',blob,'tamil-recording.'+ext);
+     const response=await fetch('/api/transcribe',{method:'POST',body:data});
+     const result=await response.json().catch(()=>({}));
+     if(!response.ok)throw new Error(result.error||'Transcription failed. Please try again.');
+     const text=(result.text||'').trim();
+     if(!text)throw new Error('I could not hear any words clearly. Please try again.');
+     out.value+=(out.value.trim()?'\n':'')+text;update();say('Tamil transcription complete. You can edit or copy the text.');out.focus();
+   }catch(error){say(error.message||'Could not transcribe this recording. Please try again.','error');}
+   finally{processing=false;rec.disabled=false;state.textContent='Ready when you are';}
+ }
+ async function startRecording(){
+   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder){
+     say('Audio recording is not supported here. Tap the text box and use the microphone on your iPhone keyboard.','error');out.focus();return;
+   }
+   try{
+     stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
+     chunks=[];
+     let options={};
+     if(MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported('audio/mp4'))options.mimeType='audio/mp4';
+     else if(MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported('audio/webm;codecs=opus'))options.mimeType='audio/webm;codecs=opus';
+     recorder=new MediaRecorder(stream,options);
+     recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data);};
+     recorder.onerror=()=>{stopTracks();setRecording(false);say('Recording failed. Please check microphone access and try again.','error');};
+     recorder.onstop=()=>{const blob=new Blob(chunks,{type:recorder.mimeType||'audio/mp4'});stopTracks();setRecording(false);clearTimeout(limitTimer);transcribe(blob);};
+     recorder.start(1000);setRecording(true);say('Listening… speak naturally in Tamil. Tap Stop when you finish.','live');
+     limitTimer=setTimeout(()=>{if(recorder&&recorder.state==='recording'){say('One-minute recording limit reached. Transcribing now.');recorder.stop();}},60000);
+   }catch(error){stopTracks();setRecording(false);say(error.name==='NotAllowedError'?'Microphone permission is blocked. Allow it in iPhone Settings or Safari website settings, then try again.':'Could not start the microphone. Check that this page is open in Safari over HTTPS.','error');}
+ }
+ rec.addEventListener('click',()=>{if(processing)return;if(recording){if(recorder&&recorder.state==='recording')recorder.stop();}else startRecording();});
+ out.addEventListener('input',update);
+ copy.addEventListener('click',async()=>{if(!out.value)return;try{await navigator.clipboard.writeText(out.value);say('Copied. Paste your Tamil text anywhere.');}catch(e){out.focus();out.select();say('Select the text and choose Copy from your device menu.');}});
+ clear.addEventListener('click',()=>{if(recording&&recorder)recorder.stop();out.value='';update();say('Text cleared. Ready for a fresh start.');});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&recording&&recorder&&recorder.state==='recording'){recorder.stop();say('Recording paused because the page went into the background.');}});
+ update();
 })();
 </script>
 </body></html>
